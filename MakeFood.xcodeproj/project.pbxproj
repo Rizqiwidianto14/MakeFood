@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3A68DA026609CA200AE94D9 /* SearchFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A68D9F26609CA200AE94D9 /* SearchFoodCell.swift */; };
 		E3EDAAE226608EAB0060307B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE126608EAB0060307B /* AppDelegate.swift */; };
 		E3EDAAE426608EAB0060307B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE326608EAB0060307B /* SceneDelegate.swift */; };
-		E3EDAAE626608EAB0060307B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE526608EAB0060307B /* ViewController.swift */; };
+		E3EDAAE626608EAB0060307B /* SearchFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE526608EAB0060307B /* SearchFoodVC.swift */; };
 		E3EDAAE926608EAB0060307B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EDAAE726608EAB0060307B /* Main.storyboard */; };
 		E3EDAAEB26608EAF0060307B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EDAAEA26608EAF0060307B /* Assets.xcassets */; };
 		E3EDAAEE26608EAF0060307B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EDAAEC26608EAF0060307B /* LaunchScreen.storyboard */; };
@@ -35,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3A68D9F26609CA200AE94D9 /* SearchFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodCell.swift; sourceTree = "<group>"; };
 		E3EDAADE26608EAB0060307B /* MakeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3EDAAE126608EAB0060307B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3EDAAE326608EAB0060307B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E3EDAAE526608EAB0060307B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3EDAAE526608EAB0060307B /* SearchFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodVC.swift; sourceTree = "<group>"; };
 		E3EDAAE826608EAB0060307B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3EDAAEA26608EAF0060307B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3EDAAED26608EAF0060307B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3A68D8C26609B4100AE94D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3EDAAE526608EAB0060307B /* SearchFoodVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E3A68D9026609B4F00AE94D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3EDAAE726608EAB0060307B /* Main.storyboard */,
+				E3A68D9F26609CA200AE94D9 /* SearchFoodCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E3EDAAD526608EAB0060307B = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +120,8 @@
 			children = (
 				E3EDAAE126608EAB0060307B /* AppDelegate.swift */,
 				E3EDAAE326608EAB0060307B /* SceneDelegate.swift */,
-				E3EDAAE526608EAB0060307B /* ViewController.swift */,
-				E3EDAAE726608EAB0060307B /* Main.storyboard */,
+				E3A68D8C26609B4100AE94D9 /* Controller */,
+				E3A68D9026609B4F00AE94D9 /* View */,
 				E3EDAAEA26608EAF0060307B /* Assets.xcassets */,
 				E3EDAAEC26608EAF0060307B /* LaunchScreen.storyboard */,
 				E3EDAAEF26608EAF0060307B /* Info.plist */,
@@ -258,7 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3EDAAE626608EAB0060307B /* ViewController.swift in Sources */,
+				E3EDAAE626608EAB0060307B /* SearchFoodVC.swift in Sources */,
+				E3A68DA026609CA200AE94D9 /* SearchFoodCell.swift in Sources */,
 				E3EDAAE226608EAB0060307B /* AppDelegate.swift in Sources */,
 				E3EDAAE426608EAB0060307B /* SceneDelegate.swift in Sources */,
 			);
