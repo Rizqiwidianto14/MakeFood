@@ -7,6 +7,8 @@ target 'MakeFood' do
 
   # Pods for MakeFood
 pod 'Moya-ObjectMapper'
+pod 'SDWebImage', '~> 5.0'
+
 
 
 

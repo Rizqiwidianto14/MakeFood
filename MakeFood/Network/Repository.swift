@@ -23,7 +23,6 @@ class Repository: Network {
         provider.request(.searchFood(name: name)) { result in
             switch result {
             case let .success(response):
-                print("this is response: \(response.data)")
                 do {
                     let results = try response.mapArray(Meals.self, atKeyPath: "meals")
                     completion(results)
