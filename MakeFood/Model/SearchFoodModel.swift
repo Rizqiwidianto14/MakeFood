@@ -8,17 +8,6 @@
 import Foundation
 import ObjectMapper
 
-//struct Meal: Mappable{
-//    var meals : [Meals]?
-//    init?(map: Map) {
-//    }
-//    
-//    mutating func mapping(map: Map) {
-//        meals    <- map["meals"]
-//    }
-//    
-//    
-//}
 
 struct Meals: Mappable{
     

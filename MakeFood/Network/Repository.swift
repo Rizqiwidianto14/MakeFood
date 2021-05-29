@@ -19,29 +19,26 @@ protocol Network{
 class Repository: Network {
     let provider = MoyaProvider<MakeFoodApi>()
 
-
-    
-    
     func getFoodList(name: String, completion: @escaping([Meals]) -> ()) {
         provider.request(.searchFood(name: name)) { result in
             switch result {
             case let .success(response):
                 print("this is response: \(response.data)")
                 do {
-                  let results = try response.mapArray(Meals.self, atKeyPath: "meals")
-                            completion(results)
-                        print(results)
-                          
-                      } catch let err{
-                        print(err)
-                        
-                      }
-            
+                    let results = try response.mapArray(Meals.self, atKeyPath: "meals")
+                    completion(results)
+                    print(results)
+                    
+                } catch let err{
+                    print(err)
+                    
+                }
+                
             case let .failure(error):
                 print(error)
             }
         }
-   
+        
     }
     
 }
