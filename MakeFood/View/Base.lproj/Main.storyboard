@@ -82,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="c82-Gp-GZ1"/>
                     <connections>
+                        <outlet property="searchFoodBar" destination="Kjc-LF-WW6" id="zIY-pI-edf"/>
                         <outlet property="searchFoodTable" destination="34H-sq-jmM" id="Bqo-AK-rDz"/>
                     </connections>
                 </viewController>

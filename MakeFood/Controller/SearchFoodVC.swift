@@ -9,10 +9,16 @@ import UIKit
 
 class SearchFoodVC: UIViewController {
     @IBOutlet weak var searchFoodTable: UITableView!
+    @IBOutlet weak var searchFoodBar: UISearchBar!
+    var repo = Repository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        repo.getFoodList(name: "Rendang") { (result) in
+           
+        }
+  
     }
 
 

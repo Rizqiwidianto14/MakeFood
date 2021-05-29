@@ -1,0 +1,6 @@
+framework module Pods_MakeFood {
+  umbrella header "Pods-MakeFood-umbrella.h"
+
+  export *
+  module * { export * }
+}
