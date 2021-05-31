@@ -117,8 +117,6 @@ struct Meals: Mappable{
         measurement20    <- map["strMeasure20"]
         
         
-        
-        
     }
     
     

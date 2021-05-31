@@ -18,9 +18,10 @@ protocol Network{
 
 class Repository: Network {
     let provider = MoyaProvider<MakeFoodApi>()
-
-    func getFoodList(name: String, completion: @escaping([Meals]) -> ()) {
+    
+    func getFoodList(name: String, completion: @escaping([Meals]) -> (), onFailed: ((String) -> Void)?) {
         provider.request(.searchFood(name: name)) { result in
+            
             switch result {
             case let .success(response):
                 do {
@@ -28,16 +29,43 @@ class Repository: Network {
                     completion(results)
                     print(results)
                     
-                } catch let err{
-                    print(err)
+                } catch let error{
+                    let err = error as NSError
+                    onFailed?(err.domain)
                     
                 }
                 
             case let .failure(error):
-                print(error)
+                let err = error as NSError
+                onFailed?(err.domain)
             }
         }
         
+
+        
     }
     
+    func getFoodDetail(id: String, completion: @escaping([Meals]) -> (), onFailed: ((String) -> Void)?) {
+        provider.request(.detailFood(id: id)){ result in
+            switch result {
+            case let .success(response):
+                do {
+                    let results = try response.mapArray(Meals.self, atKeyPath: "meals")
+                    completion(results)
+                    print(results)
+                    
+                } catch let error{
+                    let err = error as NSError
+                    onFailed?(err.domain)
+                    
+                }
+                
+            case let .failure(error):
+                let err = error as NSError
+                onFailed?(err.domain)
+            }
+            
+        }
+        
+    }
 }

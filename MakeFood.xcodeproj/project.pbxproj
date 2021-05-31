@@ -10,11 +10,13 @@
 		5273992AA0C62E0142B86F84 /* Pods_MakeFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DEE7A0EE2206DD949E1E91 /* Pods_MakeFood.framework */; };
 		8E83DF9BA8785D4D33E7EE0A /* Pods_MakeFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B867EC4EEAD8E70CB070B /* Pods_MakeFoodTests.framework */; };
 		93D8FD2E10A84389EEEE5204 /* Pods_MakeFood_MakeFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078415F93B8BBEB5888EB8A1 /* Pods_MakeFood_MakeFoodUITests.framework */; };
-		E3024E382660A4980034B50E /* SearchFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3024E372660A4980034B50E /* SearchFoodModel.swift */; };
+		E3024E382660A4980034B50E /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3024E372660A4980034B50E /* FoodModel.swift */; };
 		E3024E452660A5570034B50E /* MakeFoodApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3024E442660A5570034B50E /* MakeFoodApi.swift */; };
 		E31B6B312660CEE600FC0265 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31B6B302660CEE600FC0265 /* Repository.swift */; };
 		E352BC59266487CB0015C0E7 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352BC58266487CB0015C0E7 /* DetailVC.swift */; };
 		E3A68DA026609CA200AE94D9 /* SearchFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A68D9F26609CA200AE94D9 /* SearchFoodCell.swift */; };
+		E3CFE1742664A52700BA80A2 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFE1732664A52700BA80A2 /* Loading.swift */; };
+		E3CFE17C2664C61800BA80A2 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFE17B2664C61800BA80A2 /* BaseVC.swift */; };
 		E3EDAAE226608EAB0060307B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE126608EAB0060307B /* AppDelegate.swift */; };
 		E3EDAAE426608EAB0060307B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE326608EAB0060307B /* SceneDelegate.swift */; };
 		E3EDAAE626608EAB0060307B /* SearchFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EDAAE526608EAB0060307B /* SearchFoodVC.swift */; };
@@ -50,11 +52,13 @@
 		74951FB605FB8F18CE5A30F4 /* Pods-MakeFood-MakeFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeFood-MakeFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-MakeFood-MakeFoodUITests/Pods-MakeFood-MakeFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A0B867EC4EEAD8E70CB070B /* Pods_MakeFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC232539CF60A1A9FE0158AA /* Pods-MakeFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeFoodTests.release.xcconfig"; path = "Target Support Files/Pods-MakeFoodTests/Pods-MakeFoodTests.release.xcconfig"; sourceTree = "<group>"; };
-		E3024E372660A4980034B50E /* SearchFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodModel.swift; sourceTree = "<group>"; };
+		E3024E372660A4980034B50E /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		E3024E442660A5570034B50E /* MakeFoodApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeFoodApi.swift; sourceTree = "<group>"; };
 		E31B6B302660CEE600FC0265 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E352BC58266487CB0015C0E7 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		E3A68D9F26609CA200AE94D9 /* SearchFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodCell.swift; sourceTree = "<group>"; };
+		E3CFE1732664A52700BA80A2 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		E3CFE17B2664C61800BA80A2 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		E3EDAADE26608EAB0060307B /* MakeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3EDAAE126608EAB0060307B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3EDAAE326608EAB0060307B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +131,7 @@
 		E3024E3C2660A4A40034B50E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3024E372660A4980034B50E /* SearchFoodModel.swift */,
+				E3024E372660A4980034B50E /* FoodModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +150,8 @@
 			children = (
 				E3EDAAE526608EAB0060307B /* SearchFoodVC.swift */,
 				E352BC58266487CB0015C0E7 /* DetailVC.swift */,
+				E3CFE1732664A52700BA80A2 /* Loading.swift */,
+				E3CFE17B2664C61800BA80A2 /* BaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -454,13 +460,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3EDAAE626608EAB0060307B /* SearchFoodVC.swift in Sources */,
+				E3CFE1742664A52700BA80A2 /* Loading.swift in Sources */,
 				E3A68DA026609CA200AE94D9 /* SearchFoodCell.swift in Sources */,
 				E31B6B312660CEE600FC0265 /* Repository.swift in Sources */,
 				E3EDAAE226608EAB0060307B /* AppDelegate.swift in Sources */,
-				E3024E382660A4980034B50E /* SearchFoodModel.swift in Sources */,
+				E3024E382660A4980034B50E /* FoodModel.swift in Sources */,
 				E352BC59266487CB0015C0E7 /* DetailVC.swift in Sources */,
 				E3024E452660A5570034B50E /* MakeFoodApi.swift in Sources */,
 				E3EDAAE426608EAB0060307B /* SceneDelegate.swift in Sources */,
+				E3CFE17C2664C61800BA80A2 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
