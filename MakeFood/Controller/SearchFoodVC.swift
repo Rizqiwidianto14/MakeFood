@@ -22,6 +22,17 @@ class SearchFoodVC: UIViewController {
         // Do any additional setup after loading the view.
         searchButton.tintColor = UIColor(named: "FirstColor")
         
+
+        repo.getFoodList(name: "Pizza") { (result) in
+            self.foodDataSource = result
+            self.searchFoodTable.reloadData()
+            
+        }
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController!.navigationBar.isTranslucent = true
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
@@ -37,11 +48,9 @@ class SearchFoodVC: UIViewController {
         }
         
         
-        repo.getFoodList(name: "Pizza") { (result) in
-            self.foodDataSource = result
-            self.searchFoodTable.reloadData()
-            
-        }
+    }
+    @IBAction func actSearch(_ sender: Any) {
+        
         
     }
     
@@ -66,9 +75,7 @@ extension SearchFoodVC: UITableViewDelegate, UITableViewDataSource{
         return height
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+  
     
     
 }
