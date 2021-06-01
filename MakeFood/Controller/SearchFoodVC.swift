@@ -12,7 +12,9 @@ class SearchFoodVC: BaseVC {
     @IBOutlet weak var searchFoodTable: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchField: UITextField!
-
+    @IBOutlet weak var blankStateLabel: UILabel!
+    @IBOutlet weak var blankStateImage: UIImageView!
+    
     var repo = Repository()
     var foodDataSource = [Meals]()
     
@@ -23,7 +25,12 @@ class SearchFoodVC: BaseVC {
         // Do any additional setup after loading the view.
         searchButton.tintColor = UIColor(named: "FirstColor")
         
-        
+        if foodDataSource.count == 0{
+            searchFoodTable.isHidden = true
+            blankStateLabel.textColor = UIColor(named: "FirstColor")
+            blankStateImage.tintColor = UIColor(named: "FirstColor")
+       
+        }
 
       
         
@@ -51,13 +58,12 @@ class SearchFoodVC: BaseVC {
 
     
     @IBAction func actSearch(_ sender: Any) {
-        var name = searchField.text
-        print(name)
+        let name = searchField.text
         self.showLoading(msg: "Loading")
         repo.getFoodList(name: name!) { (result) in
                 if result.count > 0{
                     DispatchQueue.main.async {
-                        
+                        self.searchFoodTable.isHidden = false
                         self.loadView.hide()
                         self.loadingView.removeFromSuperview()
                         self.foodDataSource = result
@@ -68,6 +74,10 @@ class SearchFoodVC: BaseVC {
         } onFailed: { (error) in
             DispatchQueue.main.async {
                 self.loadView.hide()
+                self.searchFoodTable.isHidden = true
+                self.blankStateLabel.text = "We don't have your favorite food recipe:("
+                self.blankStateLabel.textColor = UIColor(named: "FirstColor")
+                self.blankStateImage.tintColor = UIColor(named: "FirstColor")
                 self.loadingView.removeFromSuperview()
             }
         }
@@ -80,7 +90,7 @@ class SearchFoodVC: BaseVC {
 
 extension SearchFoodVC: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        searchField.text = ""
+        searchField.placeholder = ""
     }
  
 }
