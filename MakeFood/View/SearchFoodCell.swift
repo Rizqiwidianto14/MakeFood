@@ -16,13 +16,10 @@ class SearchFoodCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         foodImage.layer.cornerRadius = 20
-        
-
-        // Configure the view for the selected state
     }
-
+    
 }

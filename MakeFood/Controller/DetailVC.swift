@@ -22,19 +22,11 @@ class DetailVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.showLoading(msg: "Loading")
+        
         repo.getFoodDetail(id: id) { (result) in
             if result.count > 0{
                 DispatchQueue.main.async {
-                    
-                   
-                    
-                    
-                    
-                    
-                    
-                    
                     self.loadView.hide()
                     self.loadingView.removeFromSuperview()
                     self.foodDataSource = result
@@ -49,7 +41,6 @@ class DetailVC: BaseVC {
                     self.foodImage.sd_setImage(with: URL(string: self.foodDataSource[0].mealImage ?? ""), placeholderImage: UIImage(named: "arabiata"))
                     self.foodTitle.text = self.foodDataSource[0].mealName
                     self.foodInstruction.text = self.foodDataSource[0].instruction
-                    print(parsedIngredients)
                     self.foodIngredients.text = parsedIngredients4
         
                 }
@@ -76,7 +67,6 @@ class DetailVC: BaseVC {
             navBarAppearance.shadowImage = UIImage()
             self.navigationController!.navigationBar.tintColor = UIColor.white
 
-
             self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController!.navigationBar.shadowImage = UIImage()
             self.navigationController!.navigationBar.isTranslucent = true
@@ -88,16 +78,5 @@ class DetailVC: BaseVC {
             navigationController?.navigationBar.backgroundColor = UIColor(named: "FirstColor")
         }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
