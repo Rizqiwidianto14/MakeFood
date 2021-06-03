@@ -20,7 +20,7 @@ class ProfileVC: UIViewController {
     
     var userName = ""
 
-    var isButtonEditing = false
+    private var isButtonEditing = false
     var delegate: ProfileDataDelegate?
     var profileAvatar = UIImage()
     

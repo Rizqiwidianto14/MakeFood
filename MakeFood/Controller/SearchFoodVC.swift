@@ -15,13 +15,13 @@ class SearchFoodVC: BaseVC{
     @IBOutlet weak var blankStateLabel: UILabel!
     @IBOutlet weak var blankStateImage: UIImageView!
     
-    let imageView = UIImageView(image: UIImage(named: "arabiata"))
-    var profileImage = UIImage(named: "arabiata")
+    let imageView = UIImageView(image: UIImage(named: "FotoRizqi"))
+    var profileImage = UIImage(named: "FotoRizqi")
     
     
     var repo = Repository()
     var foodDataSource = [Meals]()
-    var userName = ""
+    var userName = "Rizqi Imam Gilang Widianto"
     
     
     

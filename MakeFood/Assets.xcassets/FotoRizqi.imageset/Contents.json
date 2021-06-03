@@ -1,16 +1,15 @@
 {
   "images" : [
     {
+      "filename" : "Foto Rizqi.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "MakeFood@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "MakeFood@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

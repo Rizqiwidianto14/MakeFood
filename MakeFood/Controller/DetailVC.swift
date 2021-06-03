@@ -17,8 +17,8 @@ class DetailVC: BaseVC {
     
     
     var id = ""
-    var repo = Repository()
-    var foodDataSource = [Meals]()
+    private var repo = Repository()
+    private var foodDataSource = [Meals]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
