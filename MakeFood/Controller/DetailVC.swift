@@ -14,8 +14,6 @@ class DetailVC: BaseVC {
     @IBOutlet weak var foodIngredients: UILabel!
     @IBOutlet weak var foodInstruction: UILabel!
     
-    
-    
     var id = ""
     private var repo = Repository()
     private var foodDataSource = [Meals]()
@@ -42,7 +40,7 @@ class DetailVC: BaseVC {
                     self.foodTitle.text = self.foodDataSource[0].mealName
                     self.foodInstruction.text = self.foodDataSource[0].instruction
                     self.foodIngredients.text = parsedIngredients4
-        
+                    
                 }
             }
         } onFailed: { (error) in
@@ -51,7 +49,7 @@ class DetailVC: BaseVC {
                 self.loadingView.removeFromSuperview()
             }
         }
-
+        
         
         
     }
@@ -66,11 +64,11 @@ class DetailVC: BaseVC {
             navBarAppearance.backgroundImage = UIImage()
             navBarAppearance.shadowImage = UIImage()
             self.navigationController!.navigationBar.tintColor = UIColor.white
-
+            
             self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController!.navigationBar.shadowImage = UIImage()
             self.navigationController!.navigationBar.isTranslucent = true
-         
+            
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
             

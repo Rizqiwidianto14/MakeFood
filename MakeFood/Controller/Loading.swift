@@ -55,7 +55,6 @@ class Loading: UIVisualEffectView {
         super.didMoveToSuperview()
         
         if let superview = superview {
-            
             let width = superview.frame.size.width / 2.3
             let height: CGFloat = 50.0
             frame = CGRect(x: superview.frame.size.width / 2 - width / 2,
@@ -80,7 +79,6 @@ class Loading: UIVisualEffectView {
                                  height: height)
             label.textColor = UIColor.gray
             label.font = UIFont.boldSystemFont(ofSize: 16)
-            
             backgroundColor = UIColor.lightGray
         }
     }

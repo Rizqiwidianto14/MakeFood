@@ -5,7 +5,6 @@
 //  Created by Rizqi Imam on 01/06/21.
 //
 
-import Foundation
 import UIKit
 
 struct ProfileImagePosition {

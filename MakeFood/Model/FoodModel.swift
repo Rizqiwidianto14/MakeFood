@@ -5,7 +5,6 @@
 //  Created by Rizqi Imam on 28/05/21.
 //
 
-import Foundation
 import ObjectMapper
 
 

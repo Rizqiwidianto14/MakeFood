@@ -18,7 +18,6 @@ class SearchFoodVC: BaseVC{
     let imageView = UIImageView(image: UIImage(named: "FotoRizqi"))
     var profileImage = UIImage(named: "FotoRizqi")
     
-    
     var repo = Repository()
     var foodDataSource = [Meals]()
     var userName = "Rizqi Imam Gilang Widianto"
@@ -27,19 +26,12 @@ class SearchFoodVC: BaseVC{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         searchButton.tintColor = UIColor(named: "FirstColor")
-    
-        
         if foodDataSource.count == 0{
             searchFoodTable.isHidden = true
             blankStateLabel.textColor = UIColor(named: "FirstColor")
             blankStateImage.tintColor = UIColor(named: "FirstColor")
-            
         }
-        
-        
-        
     }
     
     
@@ -48,14 +40,10 @@ class SearchFoodVC: BaseVC{
     private func setupUI() {
         
         guard let navigationBar = self.navigationController?.navigationBar else { return }
-        
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
         imageView.addGestureRecognizer(tapGR)
         imageView.isUserInteractionEnabled = true
-        
         navigationBar.addSubview(imageView)
-        
-        // setup constraints
         imageView.layer.cornerRadius = ProfileImagePosition.imageSizeForLargeState / 2
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,9 +61,6 @@ class SearchFoodVC: BaseVC{
             vc.delegate = self
             vc.profileAvatar = profileImage!
             vc.userName = userName
-            
-    
-        
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -97,15 +82,11 @@ class SearchFoodVC: BaseVC{
             navigationController?.navigationBar.backgroundColor = UIColor(named: "FirstColor")
             setupUI()
         }
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.imageView.removeFromSuperview()
     }
-    
-    
     
     @IBAction func actSearch(_ sender: Any) {
         let name = searchField.text
@@ -131,11 +112,7 @@ class SearchFoodVC: BaseVC{
                 self.loadingView.removeFromSuperview()
             }
         }
-        
-        
     }
-    
-    
 }
 
 extension SearchFoodVC: UITextFieldDelegate{
@@ -165,14 +142,13 @@ extension SearchFoodVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let vc = self.storyboard?.instantiateViewController(identifier: "DetailVC") as! DetailVC
         vc.id = foodDataSource[indexPath.row].id ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-    
-    
-    
     
 }
 

@@ -19,7 +19,6 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     var userName = ""
-
     private var isButtonEditing = false
     var delegate: ProfileDataDelegate?
     var profileAvatar = UIImage()
@@ -36,8 +35,6 @@ class ProfileVC: UIViewController {
         let profileImageTapped = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
         profileImage.addGestureRecognizer(profileImageTapped)
         profileImage.isUserInteractionEnabled = true
-        
-        
     }
     
  
@@ -62,8 +59,6 @@ class ProfileVC: UIViewController {
             editButton.titleLabel?.text = "Edit User Name"
             nameLabel.text = nameTextField.text
             userName = nameTextField.text ?? ""
-           
-            
             isButtonEditing = false
       
             
@@ -71,9 +66,6 @@ class ProfileVC: UIViewController {
             nameTextField.isHidden = false
             nameLabel.isHidden = true
             editButton.titleLabel?.text = "OK"
-            
-        
-            
             isButtonEditing = true
         
         }
